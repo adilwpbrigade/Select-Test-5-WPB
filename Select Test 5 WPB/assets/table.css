@@ -1,0 +1,199 @@
+.navigation .menu {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.navigation .menu li {
+    list-style: none;
+    font-family: "Roboto", Sans-serif;
+    position: relative;
+}
+
+.navigation .menu>li {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+}
+
+.menu>li>a {
+    padding: 36px 0px;
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit !important;
+    text-decoration: none !important;
+    position: relative;
+    color: black;
+}
+
+.navigation .menu>li>ul.sub-menu {
+    background-color: var(--e-global-color-secondary);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 257px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transform: translateY(15px);
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.navigation .menu>li>ul.sub-menu>li>ul.sub-menu>li {
+    padding-top: 16px;
+}
+
+.navigation .menu>li>ul.sub-menu>li>ul.sub-menu {
+    padding-left: 16px;
+    position: static;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    background: none;
+    box-shadow: none;
+}
+
+.menu>li>ul>li>a {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.menu>li>ul>li>ul>li>a {
+    color: white;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+ul.sub-menu a {
+    text-transform: capitalize !important;
+    transition: color 0.3s ease-in-out;
+}
+
+ul.sub-menu a:hover {
+    color: black;
+}
+.handshakeswiper-button-next.swiper-button-disabled,
+.handshakeswiper-button-prev.swiper-button-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}
+
+@media screen and (max-width:1200px) {
+    .navigation .menu {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .navigation .menu {
+        gap: 10px;
+    }
+
+    .navigation .menu li {
+        font-size: 14px !important
+    }
+}
+
+@media screen and (min-width:768px) {
+    .menu>li>a:before {
+        bottom: 0;
+        width: 0%;
+        height: 3px;
+        position: absolute;
+        content: "";
+        background-color: var(--e-global-color-secondary);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu>li>a:hover::before {
+        width: 100%;
+    }
+
+    .navigation .menu>li:hover>ul.sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        display: block;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .navigation .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu>li>a {
+        padding: 20px 0px;
+    }
+
+    .custom-hamburger {
+        width: 30px;
+        height: 22px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 999;
+    }
+
+    .custom-hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: #000;
+        /* change color here */
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    /* Active (X) animation */
+    .custom-hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 9px;
+        position: relative;
+    }
+
+    .custom-hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .custom-hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: -9px;
+        position: relative;
+    }
+
+    .navigation-container {
+        position: absolute;
+        z-index: 999;
+        background-color: wheat;
+        top: 100%;
+        left: 0;
+        height: calc(100dvh - 70px);
+    }
+
+    .navigation-container {
+        display: none;
+    }
+
+    .navigation-container .navigation {
+        height: calc(100% - 38px);
+        overflow-y: auto;
+    }
+}
+

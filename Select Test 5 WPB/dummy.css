@@ -1,0 +1,181 @@
+.site-nav .menu {
+    display: flex !important;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+.site-nav .menu li {
+    list-style: none;
+    font-family: "Poppins", Sans-serif;
+}
+ 
+.site-nav .menu>li {
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 600 !important;
+}
+ 
+.site-nav .menu>li {
+    margin-right: 30px;
+}
+ 
+.site-nav .menu>li>a {
+    padding: 0;
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit !important;
+    text-decoration: none !important;
+    position: relative;
+    color: var(--text);
+}
+ 
+body .site-nav .menu>li>a:hover {
+    color: var(--secondary);
+    text-decoration: underline !important;
+}
+ 
+.site-nav .menu:focus-within {
+    overflow: visible;
+}
+ 
+.site-nav .menu li:focus-within>ul,
+.site-nav .menu li.menu-item-has-children:focus-within>.sub-menu {
+    opacity: 1 !important;
+    visibility: visible;
+    transform: unset
+}
+ 
+/* .site-nav .menu>li>a::after {
+    content: '';
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+} */
+/* .site-nav .menu>li:hover>a:after {
+    width: 100%;
+} */
+.site-nav .menu li.current-menu-ancestor>a,
+.site-nav .menu li.current-menu-item>a {
+    font-weight: 700 !important;
+}
+ 
+.site-nav .menu .menu-item.menu-item-has-children {
+    position: relative;
+}
+ 
+.site-nav .menu .menu-item>.sub-menu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: .3s ease-in-out;
+    transform: translatey(36px);
+    left: 0;
+    padding: 0;
+    background-color: #ffffff;
+    padding: 20px 0;
+    max-width: 344px;
+    min-width: 280px;
+    width: max-content;
+    border-top: 1px solid rgba(51, 51, 51, 0.10);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+}
+ 
+.site-nav .menu .menu-item.menu-item-has-children::after {
+    content: '';
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+}
+ 
+.site-nav .menu .menu-item.menu-item-has-children:hover::after {
+    display: block;
+}
+ 
+.site-nav .menu .menu-item.menu-item-has-children:hover>.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translatey(28px);
+}
+ 
+.site-nav .menu .menu-item>.sub-menu>li {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    position: relative;
+}
+ 
+.site-nav .menu .menu-item>.sub-menu>li:not(:last-child) {
+    margin-bottom: 0
+}
+ 
+.site-nav .menu .menu-item>.sub-menu>li>a {
+    position: relative;
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    display: inline-block;
+    padding: 11px 24px;
+    width: 100%;
+    color: var(--text);
+    text-align: left;
+    border: 1px solid transparent;
+    z-index: 1;
+    transition: color 0.3s ease;
+    border-radius: 3px;
+}
+ 
+.site-nav .menu .menu-item>.sub-menu>li.current-menu-ancestor>a,
+.site-nav .menu .menu-item>.sub-menu>li.current-menu-item>a,
+.site-nav .menu .menu-item>.sub-menu>li>a:hover {
+    background-color: #FFF8EB;
+}
+ 
+.site-nav .menu .menu-item.menu-item-has-children>ul>li>.sub-menu {
+    left: calc(100% + 20px);
+    top: 0;
+}
+ 
+.site-nav .menu .menu-item.menu-item-has-children>ul>li.menu-item-has-children .open-menu-arrow {
+    left: auto;
+    right: 9px;
+    transform: rotate(-90deg);
+    top: 10px;
+    display: none
+}
+ 
+.site-nav .menu .menu-item>.sub-menu>li>ul {
+    background-color: var(--white);
+}
+ 
+.site-nav .menu .menu-item>.sub-menu>li.current-menu-item {
+    position: relative;
+}
+ 
+.site-nav .menu .menu-item.menu-item-has-children>.open-menu-arrow {
+    width: 12px;
+    height: 12px;
+    position: static;
+    cursor: pointer;
+    display: inline-block;
+    background: url('../img/chevron-down.svg') no-repeat center center;
+    min-width: 12px;
+    margin-left: 3px;
+}
+
+
+font-family: inherit;
+font-weight: 700;
+
+font-size: 16px;
+
+line-height: 19px;
+letter-spacing: 0px;
