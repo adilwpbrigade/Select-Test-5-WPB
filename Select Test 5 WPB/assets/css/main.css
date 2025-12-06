@@ -1810,7 +1810,7 @@ footer>.container {
 
 
 #selectneuf>.container>.swiper {
-  width: 100%;
+  width: 95%;
   padding-top: 83px;
 }
 
@@ -2711,7 +2711,10 @@ footer>.container {
   font-weight: bold;
 }
 .selectswiper-button-prev {
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) ;
+}
+.selectswiper-button-prev img{
+  transform: rotate(180deg);
 }
 .appointmentswiper-button-prev.disabled,
 .appointmentswiper-button-next.disabled {
